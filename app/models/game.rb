@@ -1,9 +1,8 @@
 class Game < ApplicationRecord
-  belongs_to :user
-  has_many :scores
-  has_many :questions
+  has_many :scores, dependent: :destroy
+  has_many :games, through: :scores
+  has_many :questions, dependent: :destroy
   has_many :proposals, through: :questions
   has_many :answers, through: :proposals
   validates_presence_of :title
-  validates_presence_of :category
 end
