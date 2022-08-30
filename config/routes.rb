@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   # root "articles#index"
   resources :games, only: :index do
     post :question_selector, on: :member
-    resources :questions, only: %i[index show] do
+    resources :questions, only: %i[show] do
       resources :answers, only: :create
     end
   end
