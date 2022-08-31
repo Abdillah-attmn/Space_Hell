@@ -12,6 +12,21 @@ class AnswersController < ApplicationController
     end
   end
 
+  def answer
+    @game = Game.find(params[:game_id])
+    @user = current_user
+    @proposal = Proposal.find(params[:proposal_id])
+    @answer = Answer.new(user_id: @user.id, proposal_id: @proposal.id)
+    @answer.save!
+    @question = Question.find(params[:question_id])
+    @next_question = next_question
+    if next_question.nil?
+      redirect_to game_compute_score_path(@game)
+    else
+      redirect_to game_question_path(@game, @next_question)
+    end
+  end
+
   private
 
   def next_question

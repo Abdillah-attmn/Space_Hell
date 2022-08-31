@@ -6,9 +6,9 @@
 <!-- la gride de trajictoire -->
 <section id=timeline>
 	<h1>Trajectory of Your Space 🚀Ship🚀</h1>
-	<p class="leader">All cards must be the same height and width for space calculations on large screens.</p>
+	<p class="leader">🚀 ☄️ Space is the zone above and around our planet where there is no air to breathe or to scatter light ☄️ 🚀</p>
 	<div class="demo-card-wrapper">
-
+    
     <div class="demo-card demo-card--step1">
       <div class="container">
           <div class="card bg-primary">
@@ -26,7 +26,8 @@
                 <h3>Difficulty:</h3>
                 <span></span>
               </div>
-              <a href="http://127.0.0.1:3000/games/1/questions/1">Start Now</a>
+              <!--a href="http://127.0.0.1:3000/games/1/questions/1">Start Now</a -->
+              <%= link_to "Start Now", game_question_path(@games[0], @games[0].questions[0]),class: "btn" %>
             </div>
           </div>
       </div>

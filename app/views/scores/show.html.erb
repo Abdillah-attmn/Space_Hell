@@ -1,0 +1,25 @@
+
+<video id="background-video" autoplay loop muted>
+             <source src="https://thumbs.gfycat.com/RemoteImpishBlackbear-mobile.mp4" type="video/mp4">
+</video>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ=" crossorigin="anonymous" />
+<section class="random-bg">
+    <h1 class="BigTitleH1">🏆 Score 🏆</h1>
+    <div class="winner-wrap">
+      <div class="border"></div>
+      <div class="medal-box"><i class="fas fa-medal"></i></div>
+          <img src="https://www.pngall.com/wp-content/uploads/2016/04/Winner-PNG-Image.png" alt="" class="img-thumbnail">
+      <h1><%= @score.game.title %> Space Kids</h1>
+      <h2>User : <%= @score.user.firstname %></h2>
+      <h2><%= @score.point %> Points</h2>
+      <div class="winner-ribbon">WINNER</div>
+      <div class="right-ribbon"></div>
+      <div class="left-ribbon"></div>
+    </div>
+    <div class="BackBtnList"><%= link_to "Back to the list of the games", games_path ,class: "btn btn-outline-light" %></div>
+  </section>
+
+<footer class="footer">
+   <p class="footer-text">&copy; 2022 Created by Space Kids</p>
+</footer>
