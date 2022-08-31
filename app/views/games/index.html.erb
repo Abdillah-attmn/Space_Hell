@@ -26,7 +26,7 @@
                 <h3>Difficulty:</h3>
                 <span></span>
               </div>
-              <a href="http://127.0.0.1:3000/games/1/questions/1">Start Now</a>
+              <%= link_to "Start Now", question_selector_game_path(@games[0]), data: {turbo_method: :post}, class:"btn" %>
             </div>
           </div>
       </div>
@@ -51,7 +51,7 @@
                 <span></span>
                 <span></span>
               </div>
-              <a href="#">Start Now</a>
+              <%= link_to "Start Now", question_selector_game_path(@games[1]), data: {turbo_method: :post}, class:"btn" %>
             </div>
           </div>
       </div>
@@ -78,7 +78,7 @@
                 <span></span>
                 <span></span>
               </div>
-              <a href="#">Start Now</a>
+              <%= link_to "Start Now", question_selector_game_path(@games[2]), data: {turbo_method: :post}, class:"btn" %>
             </div>
           </div>
       </div>
@@ -107,7 +107,7 @@
                 <span></span>
                 <span></span>
               </div>
-              <a href="#">Start Now</a>
+              <%= link_to "Start Now", question_selector_game_path(@games[3]), data: {turbo_method: :post}, class:"btn" %>
             </div>
           </div>
       </div>
