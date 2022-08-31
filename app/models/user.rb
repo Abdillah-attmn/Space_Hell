@@ -12,10 +12,18 @@ class User < ApplicationRecord
 
 
   def remaining_questions(game)
-    questions = game.questions
-    questions.joins(:answers).where.not(answers: { user_id: self.id })
-
+    game.questions.reject do |question|
+      question.answers.select { |answer| answer.user == self }.any?
+    end
     # answered_question_ids = answers.map { |answer| answer.question.id }
     # game.questions.where.not(id: answered_question_ids)
+  end
+
+  def total_score
+    total_score = 0
+    scores.each do |score|
+      total_score += score.point
+    end
+    return total_score
   end
 end
