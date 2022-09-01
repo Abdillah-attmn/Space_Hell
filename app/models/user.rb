@@ -2,6 +2,7 @@ class User < ApplicationRecord
   has_many :scores, dependent: :destroy
   has_many :games, through: :scores
   has_many :answers, dependent: :destroy
+  validates_presence_of :nickname
   validates :firstname, uniqueness: { scope: :lastname }
   validates :email, uniqueness: true
   validates :encrypted_password, presence: true

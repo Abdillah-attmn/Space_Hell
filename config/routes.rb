@@ -14,4 +14,7 @@ Rails.application.routes.draw do
     end
   end
   resources :scores, only: %i[show create]
+  resources :chatrooms, only: :show do
+    resources :messages, only: :create
+  end
 end
