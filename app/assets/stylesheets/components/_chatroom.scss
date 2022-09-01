@@ -1,12 +1,27 @@
 .chatroom {
-  background: white;
+  background: rgba(255, 255, 255, 0.092);
   margin-top: 9px;
   height: calc(100vh - 75px);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   flex-grow: 1;
+  border-radius: 10px;
+  margin-bottom: 10px;
 
+  .btn-primary-chatroom {
+    border-radius: 10px;
+    margin: 6px;
+    margin-bottom: 0.8px;
+    --bs-btn-padding-x: 35px;
+    --bs-btn-padding-y: 1px;
+  }
+  .form-control{
+    border-radius: 10px;
+  }
+  .d-flex-button{
+    display: initial;
+  }
   h1 {
     border-bottom: 1px solid $gray-200;
     margin-bottom: 0;
@@ -14,6 +29,7 @@
   }
 
   .messages {
+    color: aquamarine;
     height: 100%;
     overflow: scroll;
     padding: 1rem;
