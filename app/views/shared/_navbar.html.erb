@@ -1,6 +1,6 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
   <div class="container-fluid">
-    <%= link_to "http://127.0.0.1:3000/", class: "navbar-brand" do %>
+    <%= link_to root_path, class: "navbar-brand" do %>
       <%= image_tag "https://cdn-icons-png.flaticon.com/512/4825/4825026.png" %>
       <p class="LogoText">Space kids</p>
     <% end %>
@@ -15,14 +15,14 @@
           <li class="nav-item active">
             <%= link_to "Home", "#", class: "nav-link" %>
           </li>
+          <% chatroom = Chatroom.first %>
           <li class="nav-item">
-            <%= link_to "Messages", "#", class: "nav-link" %>
+            <!--a href="http://localhost:3000/chatrooms/1", class="nav-link">Message</a-->
+            <%= link_to "Message", chatroom_path(chatroom), class: "nav-link" %>
           </li>
           <li class="nav-item dropdown">
-            <%= image_tag "https://img.freepik.com/vecteurs-premium/profil-avatar-petit-enfant_18591-50415.jpg?w=996", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+            <a class="nav-link" href="#" data-bs-toggle="dropdown"><%= current_user.nickname %></a>
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-              <%= link_to "Action", "#", class: "dropdown-item" %>
-              <%= link_to "Another action", "#", class: "dropdown-item" %>
               <%= link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete}, class: "dropdown-item" %>
             </div>
           </li>
