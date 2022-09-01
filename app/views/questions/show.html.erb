@@ -17,8 +17,10 @@
                             <div class="card-front">
                                 <div class="card-front__tp card-front__tp--city">
 
+                              <% game = @question.game %>
+                              <% questions = game.questions %>
                             <h2 class="card-front__heading">
-                                Question n°<%= @question.id %>
+                                Question n°<%= questions.count - current_user.remaining_questions(game).count + 1%>
                             </h2>
                             <p class="card-front__text-price">
                                 Space kiks
@@ -44,12 +46,9 @@
                             <h3 class="inside-page__heading inside-page__heading--city">
                                <%= @question.content %>
                             </h3>
-                            <p class="inside-page__text">
-                               Question number One
-                            </p>
                             <% @proposals.each do |p| %>
                               <%#= link_to "#{p.content}", game_question_answers_path(@question.game, @question, p), class: "inside-page__btn inside-page__btn--city", data: {turbo_method: :post} %>
-                              <%= link_to "#{p.content}", game_question_answer_path(@question.game, @question, :proposal_id => p.id), class: "inside-page__btn inside-page__btn--city" %>
+                              <%= link_to "#{p.content}", game_question_answer_path(@question.game, @question, :proposal_id => p.id), class: "inside-page__btn inside-page__btn--city", data:{correct: p.correct, controller: 'color-answers', action: 'click->color-answers#color'} %>
                             <% end  %>
                         </div>
                     </div>

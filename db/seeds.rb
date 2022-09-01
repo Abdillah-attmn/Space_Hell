@@ -15,154 +15,155 @@ User.destroy_all
 
 level_one = Game.create!(title: "part_one", content: "Let's go!")
 
-first_question = Question.create!(content: "1 - What is the closest planet in the earth?", game: level_one)
+first_question = Question.create!(content: "What is the closest planet in the earth?", game: level_one)
 
-first_proposal_question_one = Proposal.create!(content: "Mercure", question: first_question)
+Proposal.create!(content: "Mercury", question: first_question)
 second_proposal_question_one = Proposal.create!(content: "Venus", question: first_question)
-third_proposal_question_one = Proposal.create!(content: "Mars", question: first_question, correct: true)
-fourth_proposal_question_one = Proposal.create!(content: "Moon", question: first_question)
+Proposal.create!(content: "Mars", question: first_question, correct: true)
+Proposal.create!(content: "Moon", question: first_question)
 
-second_question = Question.create!(content: "2 - What is the farest planet of solar system?", game: level_one)
+second_question = Question.create!(content: "What is the farest planet of solar system?", game: level_one)
 
-first_proposal_question_two = Proposal.create!(content: "Pluton", question: second_question, correct: true)
-second_proposal_question_two = Proposal.create!(content: "Saturn", question: second_question)
-third_proposal_question_two = Proposal.create!(content: "Uranus", question: second_question)
-fourth_proposal_question_two = Proposal.create!(content: "Neptun", question: second_question)
+first_proposal_question_two = Proposal.create!(content: "Pluto", question: second_question)
+Proposal.create!(content: "Saturn", question: second_question)
+Proposal.create!(content: "Uranus", question: second_question)
+Proposal.create!(content: "Neptune", question: second_question, correct: true)
 
 level_two = Game.create!(title: "part_two", content: "Let's go!")
 
-first_question = Question.create!(content: "1 - What is the largest planet in the solar system?", game: level_two)
+first_question = Question.create!(content: "What is the largest planet in the solar system?", game: level_two)
 
-first_proposal_question_one = Proposal.create!(content: "Jupiter", question: first_question, correct: true)
-second_proposal_question_one = Proposal.create!(content: "Earth", question: first_question)
-third_proposal_question_one = Proposal.create!(content: "Saturn", question: first_question)
-fourth_proposal_question_one = Proposal.create!(content: "Moon", question: first_question)
+Proposal.create!(content: "Jupiter", question: first_question, correct: true)
+Proposal.create!(content: "Earth", question: first_question)
+third_proposal_question_three = Proposal.create!(content: "Saturn", question: first_question)
+Proposal.create!(content: "Moon", question: first_question)
 
-second_question = Question.create!(content: " 2 - What is the name of the European rocket?", game: level_two)
+second_question = Question.create!(content: " What is the name of the European rocket?", game: level_two)
 
-first_proposal_question_two = Proposal.create!(content: "Ariadne", question: second_question, correct: true)
-second_proposal_question_two = Proposal.create!(content: "Apollo", question: second_question)
-third_proposal_question_two = Proposal.create!(content: "Travel", question: second_question)
-fourth_proposal_question_two = Proposal.create!(content: "Nautilus", question: second_question)
+Proposal.create!(content: "Ariane", question: second_question, correct: true)
+Proposal.create!(content: "Apollo", question: second_question)
+Proposal.create!(content: "Travel", question: second_question)
+Proposal.create!(content: "Nautilus", question: second_question)
 
-third_question = Question.create!(content: "3 - Besides the Moon, what is the closest planet to Earth?", game: level_two)
+third_question = Question.create!(content: "Besides the Moon, what is the closest planet to Earth?", game: level_two)
 
-first_proposal_question_three = Proposal.create!(content: "March", question: third_question, correct: true)
-second_proposal_question_three = Proposal.create!(content: "Saturn", question: third_question)
-third_proposal_question_three = Proposal.create!(content: "Pluto", question: third_question)
-fourth_proposal_question_three = Proposal.create!(content: "Uranus", question: third_question)
+Proposal.create!(content: "Mars", question: third_question, correct: true)
+Proposal.create!(content: "Saturn", question: third_question)
+Proposal.create!(content: "Pluto", question: third_question)
+Proposal.create!(content: "Uranus", question: third_question)
 
 level_three = Game.create!(title: "part_three", content: "Let's go!")
 
-first_question = Question.create!(content: "1 - Who is the first man to walk on the moon?", game: level_three)
+first_question = Question.create!(content: "Who is the first man to walk on the moon?", game: level_three)
 
-first_proposal_question_one = Proposal.create!(content: "Yuri Gagarin", question: first_question)
-second_proposal_question_one = Proposal.create!(content: "Buzz Aldrin", question: first_question)
-third_proposal_question_one = Proposal.create!(content: "Neil Armstrong", question: first_question, correct: true)
-fourth_proposal_question_one = Proposal.create!(content: "Moon light", question: first_question)
+Proposal.create!(content: "Yuri Gagarin", question: first_question)
+Proposal.create!(content: "Buzz Aldrin", question: first_question)
+Proposal.create!(content: "Neil Armstrong", question: first_question, correct: true)
+Proposal.create!(content: "Moon light", question: first_question)
 
-second_question = Question.create!(content: "2 - What is the closest star to Earth?", game: level_three)
+second_question = Question.create!(content: "What is the closest star to Earth?", game: level_three)
 
-first_proposal_question_two = Proposal.create!(content: "The Sun", question: second_question, correct: true)
-second_proposal_question_two = Proposal.create!(content: "The moon", question: second_question)
-third_proposal_question_two = Proposal.create!(content: "Alpha Centauri", question: second_question)
-fourth_proposal_question_two = Proposal.create!(content: "Big dog", question: second_question)
+Proposal.create!(content: "The Sun", question: second_question, correct: true)
+Proposal.create!(content: "The moon", question: second_question)
+Proposal.create!(content: "Alpha Centauri", question: second_question)
+Proposal.create!(content: "Big dog", question: second_question)
 
-third_question = Question.create!(content: "3 - What is the name of the gigantic
+third_question = Question.create!(content: "What is the name of the gigantic
                                                 explosion with which the universe began?", game: level_three)
 
-first_proposal_question_three = Proposal.create!(content: "The Bang-Bang", question: third_question)
-second_proposal_question_three = Proposal.create!(content: "Bling Bling", question: third_question)
-third_proposal_question_three = Proposal.create!(content: "The Big Bang", question: third_question, correct: true)
-fourth_proposal_question_three = Proposal.create!(content: "The Big-Joke ", question: third_question)
+Proposal.create!(content: "The Bang-Bang", question: third_question)
+Proposal.create!(content: "Bling Bling", question: third_question)
+Proposal.create!(content: "The Big Bang", question: third_question, correct: true)
+Proposal.create!(content: "The Big-Joke ", question: third_question)
 
-fourth_question = Question.create!(content: "4 - Since 2006, which planet is no longer part of the solar system?", game:level_three)
+fourth_question = Question.create!(content: "Since 2006, which planet is no longer part of the solar system?",
+                                   game: level_three)
 
-first_proposal_question_three = Proposal.create!(content: "Uranus", question: third_question)
-second_proposal_question_three = Proposal.create!(content: "Saturn", question: third_question)
-third_proposal_question_three = Proposal.create!(content: "Pluto", question: third_question, correct: true)
-fourth_proposal_question_three = Proposal.create!(content: "Namek", question: third_question)
+Proposal.create!(content: "Uranus", question: fourth_question)
+Proposal.create!(content: "Saturn", question: fourth_question)
+Proposal.create!(content: "Pluto", question: fourth_question, correct: true)
+Proposal.create!(content: "Namek", question: fourth_question)
 
 level_four = Game.create!(title: "part_four", content: "Let's go!")
 
-first_question = Question.create!(content: "1 - In what year did the first man walk on the moon?", game: level_four)
+first_question = Question.create!(content: "In what year did the first man walk on the moon?", game: level_four)
 
-first_proposal_question_one = Proposal.create!(content: "1968", question: first_question)
-second_proposal_question_one = Proposal.create!(content: "1969", question: first_question, correct: true)
-third_proposal_question_one = Proposal.create!(content: "1970", question: first_question)
-fourth_proposal_question_one = Proposal.create!(content: "1945", question: first_question)
+Proposal.create!(content: "1968", question: first_question)
+Proposal.create!(content: "1969", question: first_question, correct: true)
+Proposal.create!(content: "1970", question: first_question)
+Proposal.create!(content: "1945", question: first_question)
 
-second_question = Question.create!(content: "2 - What is the moment when the moon hides the sun called?", game: level_four)
+second_question = Question.create!(content: "What is the moment when the moon hides the sun called?", game: level_four)
 
-first_proposal_question_two = Proposal.create!(content: "The Big Bang", question: second_question)
-second_proposal_question_two = Proposal.create!(content: "An eruption", question: second_question)
-third_proposal_question_two = Proposal.create!(content: "An Eclipse", question: second_question, correct: true)
-fourth_proposal_question_two = Proposal.create!(content: "SuperNova", question: second_question)
+Proposal.create!(content: "The Big Bang", question: second_question)
+Proposal.create!(content: "An eruption", question: second_question)
+Proposal.create!(content: "An Eclipse", question: second_question, correct: true)
+Proposal.create!(content: "SuperNova", question: second_question)
 
-third_question = Question.create!(content: "3 - What is the Earth surrounded by?", game: level_four)
+third_question = Question.create!(content: "What is the Earth surrounded by?", game: level_four)
 
-first_proposal_question_three = Proposal.create!(content: "From a layer of air, the atmosphere", question: third_question)
-second_proposal_question_three = Proposal.create!(content: "From Martians", question: third_question)
-third_proposal_question_three = Proposal.create!(content: "water", question: third_question, correct: true)
-fourth_proposal_question_three = Proposal.create!(content: "From Cloud", question: third_question)
+Proposal.create!(content: "From a layer of air, the atmosphere", question: third_question)
+Proposal.create!(content: "From Martians", question: third_question)
+Proposal.create!(content: "water", question: third_question, correct: true)
+Proposal.create!(content: "From Cloud", question: third_question)
 
-fourth_question = Question.create!(content: "4 - The Sun is more precisely?", game: level_four)
+fourth_question = Question.create!(content: "The Sun is more precisely?", game: level_four)
 
-first_proposal_question_three = Proposal.create!(content: "A planet", question: third_question)
-second_proposal_question_three = Proposal.create!(content: "A star", question: third_question, correct: true)
-third_proposal_question_three = Proposal.create!(content: "A Rift in Space", question: third_question)
-fourth_proposal_question_three = Proposal.create!(content: "Asteroid", question: third_question)
+Proposal.create!(content: "A planet", question: fourth_question)
+Proposal.create!(content: "A star", question: fourth_question, correct: true)
+Proposal.create!(content: "A Rift in Space", question: fourth_question)
+Proposal.create!(content: "Asteroid", question: fourth_question)
 
-fifth_question = Question.create!(content: "5 - The largest planet in the Milky Way is?", game: level_four)
+fifth_question = Question.create!(content: "The largest planet in the Milky Way is?", game: level_four)
 
-first_proposal_question_three = Proposal.create!(content: "Vegeta", question: third_question)
-second_proposal_question_three = Proposal.create!(content: "Saturn", question: third_question)
-third_proposal_question_three = Proposal.create!(content: "Pluto", question: third_question)
-fourth_proposal_question_three = Proposal.create!(content: "Jupiter", question: third_question, correct: true)
+Proposal.create!(content: "Vegeta", question: fifth_question)
+Proposal.create!(content: "Saturn", question: fifth_question)
+Proposal.create!(content: "Pluto", question: fifth_question)
+Proposal.create!(content: "Jupiter", question: fifth_question, correct: true)
 
 level_five = Game.create!(title: "part_five", content: "Let's go!")
 
-first_question = Question.create!(content: "1 - In what year did the first man walk on the moon?", game: level_five)
+first_question = Question.create!(content: "In what year did the first man walk on the moon?", game: level_five)
 
-first_proposal_question_one = Proposal.create!(content: "1968", question: first_question)
-second_proposal_question_one = Proposal.create!(content: "1969", question: first_question, correct: true)
-third_proposal_question_one = Proposal.create!(content: "1970", question: first_question)
-fourth_proposal_question_one = Proposal.create!(content: "1945", question: first_question)
+Proposal.create!(content: "1968", question: first_question)
+Proposal.create!(content: "1969", question: first_question, correct: true)
+Proposal.create!(content: "1970", question: first_question)
+Proposal.create!(content: "1945", question: first_question)
 
-second_question = Question.create!(content: "2 - What is the moment when the moon hides the sun called?", game: level_five)
+second_question = Question.create!(content: "What is the moment when the moon hides the sun called?", game: level_five)
 
-first_proposal_question_two = Proposal.create!(content: "The Big Bang", question: second_question)
-second_proposal_question_two = Proposal.create!(content: "An eruption", question: second_question)
-third_proposal_question_two = Proposal.create!(content: "An Eclipse", question: second_question, correct: true)
-fourth_proposal_question_two = Proposal.create!(content: "SuperNova", question: second_question)
+Proposal.create!(content: "The Big Bang", question: second_question)
+Proposal.create!(content: "An eruption", question: second_question)
+Proposal.create!(content: "An Eclipse", question: second_question, correct: true)
+Proposal.create!(content: "SuperNova", question: second_question)
 
-third_question = Question.create!(content: "3 - What is the Earth surrounded by?", game: level_five)
+third_question = Question.create!(content: "What is the Earth surrounded by?", game: level_five)
 
-first_proposal_question_three = Proposal.create!(content: "From a layer of air, the atmosphere", question: third_question)
-second_proposal_question_three = Proposal.create!(content: "From Martians", question: third_question)
-third_proposal_question_three = Proposal.create!(content: "water", question: third_question, correct: true)
-fourth_proposal_question_three = Proposal.create!(content: "From Cloud", question: third_question)
+Proposal.create!(content: "From a layer of air, the atmosphere", question: third_question)
+Proposal.create!(content: "From Martians", question: third_question)
+Proposal.create!(content: "water", question: third_question, correct: true)
+Proposal.create!(content: "From Cloud", question: third_question)
 
-fourth_question = Question.create!(content: "4 - The Sun is more precisely?", game: level_five)
+fourth_question = Question.create!(content: "The Sun is more precisely?", game: level_five)
 
-first_proposal_question_three = Proposal.create!(content: "A planet", question: third_question)
-second_proposal_question_three = Proposal.create!(content: "A star", question: third_question, correct: true)
-third_proposal_question_three = Proposal.create!(content: "A Rift in Space", question: third_question)
-fourth_proposal_question_three = Proposal.create!(content: "Asteroid", question: third_question)
+Proposal.create!(content: "A planet", question: fourth_question)
+Proposal.create!(content: "A star", question: fourth_question, correct: true)
+Proposal.create!(content: "A Rift in Space", question: fourth_question)
+Proposal.create!(content: "Asteroid", question: fourth_question)
 
-fifth_question = Question.create!(content: "5 - The largest planet in the Milky Way is?", game: level_five)
+fifth_question = Question.create!(content: "The largest planet in the Milky Way is?", game: level_five)
 
-first_proposal_question_three = Proposal.create!(content: "Vegeta", question: third_question)
-second_proposal_question_three = Proposal.create!(content: "Saturn", question: third_question)
-third_proposal_question_three = Proposal.create!(content: "Pluto", question: third_question)
-fourth_proposal_question_three = Proposal.create!(content: "Jupiter", question: third_question, correct: true)
+Proposal.create!(content: "Vegeta", question: fifth_question)
+Proposal.create!(content: "Saturn", question: fifth_question)
+Proposal.create!(content: "Pluto", question: fifth_question)
+Proposal.create!(content: "Jupiter", question: fifth_question, correct: true)
 
-sixth_question = Question.create!(content: "6 - The explosion of a Sun is called?", game: evel_five)
+sixth_question = Question.create!(content: "The explosion of a Sun is called?", game: level_five)
 
-first_proposal_question_three = Proposal.create!(content: "Big Bang", question: third_question)
-second_proposal_question_three = Proposal.create!(content: "Nova", question: third_question)
-third_proposal_question_three = Proposal.create!(content: "supernova", question: third_question, correct: true)
-fourth_proposal_question_three = Proposal.create!(content: "Love at first sight", question: third_question)
+Proposal.create!(content: "Big Bang", question: sixth_question)
+Proposal.create!(content: "Nova", question: sixth_question)
+Proposal.create!(content: "supernova", question: sixth_question, correct: true)
+Proposal.create!(content: "Love at first sight", question: sixth_question)
 
 2.times do
   User.create!(firstname: Faker::Name.first_name, lastname: Faker::Name.last_name,
