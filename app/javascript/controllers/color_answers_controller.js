@@ -14,9 +14,9 @@ export default class extends Controller {
     console.log(correct);
 
     if (correct == 'true') {
-      event.currentTarget.classList.add('btn-success');
+      event.currentTarget.classList.add('text-success');
     } else {
-      event.currentTarget.classList.add('btn-danger');
+      event.currentTarget.classList.add('text-danger');
     }
 
     setTimeout(() => {
