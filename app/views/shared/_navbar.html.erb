@@ -15,10 +15,12 @@
           <li class="nav-item active">
             <%= link_to "Home", "#", class: "nav-link" %>
           </li>
-          <% chatroom = Chatroom.first %>
+
           <li class="nav-item">
             <!--a href="http://localhost:3000/chatrooms/1", class="nav-link">Message</a-->
-            <%= link_to "Message", chatroom_path(chatroom), class: "nav-link" %>
+            <% if Chatroom.first.present? %>
+              <%= link_to "Message", chatroom_path(Chatroom.first), class: "nav-link" %>
+            <% end %>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link" href="#" data-bs-toggle="dropdown"><%= current_user.nickname %></a>
