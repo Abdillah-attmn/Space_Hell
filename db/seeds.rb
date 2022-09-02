@@ -75,10 +75,10 @@ Proposal.create!(content: "Big dog", question: second_question)
 third_question = Question.create!(content: "What is the name of the gigantic
                                                 explosion with which the universe began?", game: level_three, image: "https://static.videezy.com/system/resources/previews/000/051/938/original/2017_06_16-Particle-Explode1.mp4")
 
-Proposal.create!(content: "The Bang-Bang", question: third_question)
-Proposal.create!(content: "Bling Bling", question: third_question)
-Proposal.create!(content: "The Big Bang", question: third_question, correct: true)
-Proposal.create!(content: "The Big-Joke ", question: third_question)
+Proposal.create!(content: "Bang-Bang", question: third_question)
+Proposal.create!(content: "big-Car", question: third_question)
+Proposal.create!(content: "Big Bang", question: third_question, correct: true)
+Proposal.create!(content: "Big-Joke ", question: third_question)
 
 fourth_question = Question.create!(content: "Since 2006, which planet is no longer part of the solar system?",
                                    game: level_three, image: "https://static.videezy.com/system/resources/previews/000/054/672/original/4K_152.mp4")
@@ -101,23 +101,23 @@ Proposal.create!(content: "1945", question: first_question)
 second_question = Question.create!(content: "What is the moment when the moon hides the sun called?", game: level_four,
                                    image: "https://static.videezy.com/system/resources/previews/000/024/852/original/4k-abstract-circle-strokes-animation-clip.mp4")
 
-Proposal.create!(content: "The Big Bang", question: second_question)
-Proposal.create!(content: "An eruption", question: second_question)
-Proposal.create!(content: "An Eclipse", question: second_question, correct: true)
+Proposal.create!(content: "Big Bang", question: second_question)
+Proposal.create!(content: "Eruption", question: second_question)
+Proposal.create!(content: "Eclipse", question: second_question, correct: true)
 Proposal.create!(content: "SuperNova", question: second_question)
 
 third_question = Question.create!(content: "What is the Earth surrounded by?", game: level_four, image: "https://static.videezy.com/system/resources/previews/000/041/026/original/alb_earth1007_1080p_24fps.mp4")
 
-Proposal.create!(content: "From a layer of air, the atmosphere", question: third_question, correct: true)
-Proposal.create!(content: "From Martians", question: third_question)
-Proposal.create!(content: "water", question: third_question)
-Proposal.create!(content: "From Cloud", question: third_question)
+Proposal.create!(content: "Atmosphere", question: third_question, correct: true)
+Proposal.create!(content: "Martians", question: third_question)
+Proposal.create!(content: "Water", question: third_question)
+Proposal.create!(content: "Cloud", question: third_question)
 
 fourth_question = Question.create!(content: "The Sun is more precisely?", game: level_four, image: "https://static.videezy.com/system/resources/previews/000/052/575/original/200827-LoopFireEnergySphere.mp4")
 
-Proposal.create!(content: "A planet", question: fourth_question)
-Proposal.create!(content: "A star", question: fourth_question, correct: true)
-Proposal.create!(content: "A Rift in Space", question: fourth_question)
+Proposal.create!(content: "Planet", question: fourth_question)
+Proposal.create!(content: "Star", question: fourth_question, correct: true)
+Proposal.create!(content: "Rift-in-Space", question: fourth_question)
 Proposal.create!(content: "Asteroid", question: fourth_question)
 
 fifth_question = Question.create!(content: "The largest planet in the Milky Way is?", game: level_four, image: "https://static.videezy.com/system/resources/previews/000/051/545/original/Nebula_Background_6.mp4")
@@ -138,10 +138,10 @@ Proposal.create!(content: "12", question: first_question)
 
 second_question = Question.create!(content: "A black hole forms as a result of:", game: level_five, image: "https://static.videezy.com/system/resources/previews/000/046/828/original/geometric.mp4")
 
-Proposal.create!(content: "The explosion of an asteroid", question: second_question)
-Proposal.create!(content: "The explosion of a star", question: second_question, correct: true)
-Proposal.create!(content: "A Rift in Space", question: second_question)
-Proposal.create!(content: "Another dimension", question: second_question)
+Proposal.create!(content: "Asteroid", question: second_question)
+Proposal.create!(content: "Explosion-Star", question: second_question, correct: true)
+Proposal.create!(content: "Rift-Space", question: second_question)
+Proposal.create!(content: "Another-Dimension", question: second_question)
 
 third_question = Question.create!(content: "What are the planets called?", game: level_five, image: "https://static.videezy.com/system/resources/previews/000/049/044/original/Jupiter-and-Saturn-on-the-night-sky-and-light-orange-cloud-moving-pass.mp4")
 
@@ -156,14 +156,14 @@ fourth_question = Question.create!(content: "Dad, can you tell me which planet i
 Proposal.create!(content: "Mercure", question: fourth_question)
 Proposal.create!(content: "Uranus", question: fourth_question, correct: true)
 Proposal.create!(content: "Mars", question: fourth_question)
-Proposal.create!(content: "Uh... Can you remind me of the definition of telluric?", question: fourth_question)
+Proposal.create!(content: "Telluric?", question: fourth_question)
 
 fifth_question = Question.create!(content: "This one is easier! The 4 giant planets (Jupiter, Saturn, Neptune, Uranus) are also called .",
                                   game: level_five,
                                   image: "https://static.videezy.com/system/resources/previews/000/021/975/original/beautiful-hd-jupiter-planet-background.mp4")
 
-Proposal.create!(content: "gaseous planets", question: fifth_question, correct: true)
-Proposal.create!(content: "rocky planets", question: fifth_question)
+Proposal.create!(content: "Gaseous planets", question: fifth_question, correct: true)
+Proposal.create!(content: "Rocky planets", question: fifth_question)
 Proposal.create!(content: "Aqueous planets", question: fifth_question)
 Proposal.create!(content: "Research planets", question: fifth_question)
 
