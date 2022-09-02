@@ -15,6 +15,7 @@ Message.destroy_all
 Chatroom.destroy_all
 User.destroy_all
 
+Chatroom.create!(name: "The Great Chat")
 level_one = Game.create!(title: "part_one", content: "Let's go!")
 
 first_question = Question.create!(content: "What is the closest planet in the earth?",
