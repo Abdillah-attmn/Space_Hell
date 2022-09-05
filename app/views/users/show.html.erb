@@ -1,25 +1,79 @@
-<h1><%= @user.nickname %>'s Profil</h1>
-<ul>
-  <li> <img src="https://cdn2.iconfinder.com/data/icons/people-flat-design/64/People-Man-Boy-Kid-Happy-Smile-Avatar-1024.png" class= "img-thumbnail w-25" alt=""></li>
-  <li style="color: white">
-    <%= @user.firstname %>
-  </li>
-  <li style="color: white">
-    <%= @user.lastname %>
-  </li>
-  <li style="color: white">
-    <%= @user.email %>
-  </li>
-  <li style="color: white">
-    <%= @user.total_score %>
-  </li>
-  <li style="color: white">
-    <p>All wrong answers</p>
-    <% @user.answers.each do |answer| %>
-      <% if answer.proposal.correct == false %>
-      <% game = answer.proposal.question.game %>
-        Game: <%= game.title %> ; Question: <%= answer.proposal.question.content %>; My Answer: <%= answer.proposal.content %><br>
-      <% end %>
-    <% end %>
-  </li>
-</ul>
+<video id="background-video" autoplay loop muted>
+             <source src="https://thumbs.gfycat.com/RemoteImpishBlackbear-mobile.mp4" type="video/mp4">
+</video>
+
+
+
+<div class="center">
+  <div class="card">
+  <h1 class="textSpace"> SPACE KIDS</h1>
+    <div class="additional">
+      <div class="user-card">
+        <div class="level center">
+          Level 1
+        </div>
+        <div class="points center">
+           <%= @user.total_score %> Points
+        </div>
+
+        <svg width="110" height="110" viewBox="0 0 250 250" xmlns="https://cdn2.iconfinder.com/data/icons/people-flat-design/64/People-Man-Boy-Kid-Happy-Smile-Avatar-1024.png" role="img" aria-labelledby="title desc" class="center">
+          <title id="title">Teacher</title>
+          <desc id="desc">Cartoon of a Caucasian woman smiling, and wearing black glasses and a purple shirt with white collar drawn by Alvaro Montoro.</desc>
+          <style>
+            .skin { fill: #eab38f; }
+            .eyes { fill: #1f1f1f; }
+            .hair { fill: #2f1b0d; }
+            .line { fill: none; stroke: #2f1b0d; stroke-width:2px; }
+          </style>
+          <defs>
+            <clipPath id="scene">
+              <circle cx="125" cy="125" r="115"/>
+            </clipPath>
+            <clipPath id="lips">
+              <path d="M 106,132 C 113,127 125,128 125,132 125,128 137,127 144,132 141,142  134,146  125,146  116,146 109,142 106,132 Z" />
+            </clipPath>
+          </defs>
+          <circle cx="125" cy="125" r="120" fill="rgba(0,0,0,0.15)" src="https://cdn2.iconfinder.com/data/icons/people-flat-design/64/People-Man-Boy-Kid-Happy-Smile-Avatar-1024.png" alt="">
+        </svg>
+        <img src="https://cdn2.iconfinder.com/data/icons/people-flat-design/64/People-Man-Boy-Kid-Happy-Smile-Avatar-1024.png" alt="" style="width: 150px; height: 150px; position: relative; top: 190px;">
+      </div>
+      <div class="more-info">
+        <h1><%= @user.nickname %>'s Profil</h1>
+        <hr style= "color:#fff;">
+        <div class="coords">
+          <span class="mx-3">Email :  <%= @user.email %></span>
+          <span class="mx-3">Last Name :  <%= @user.lastname %></span>
+          <span class="mx-3">First Name :  <%= @user.firstname %></span>
+        </div>
+        <hr style= "color:#fff;">
+
+        <div class="coords">
+         <h3>All wrong answers</h3>
+            <table class = "table">
+              <thead>
+                <tr style="color: white">
+                  <th>Game</th>
+                  <th>Question</th>
+                  <th>Proposal</th>
+                </tr>
+              </thead>
+
+
+              <tbody>
+                <% @user.answers.each do |answer| %>
+                  <tr style="color: white">
+                    <% if answer.proposal.correct == false %>
+                      <% game = answer.proposal.question.game %>
+                      <td><%= game.title %></td>
+                      <td><%= answer.proposal.question.content %></td>
+                      <td><%= answer.proposal.content %></td>
+                    <% end %>
+                  </tr>
+                <% end %>
+              </tbody>
+            </table>
+        </div>
+
+        </div>
+      </div>
+    </div>
