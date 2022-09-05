@@ -5,6 +5,9 @@
  * For details, see http://www.apache.org/licenses/LICENSE-2.0.
  */
 
+
+//  html { overflow-y: hidden; }
+
  body {
   overflow-x: hidden;
   font-family: "Roboto Slab","Helvetica Neue",Helvetica,Arial,sans-serif;
@@ -278,15 +281,16 @@ header {
 }
 
 header .intro-text {
-  padding-top: 100px;
-  padding-bottom: 50px;
+  padding-top: 1px;
+  padding-bottom: 1px;
 }
 
 header .intro-text .intro-lead-in {
   margin-bottom: 25px;
+  margin-top: 100px;
   font-family: "Droid Serif","Helvetica Neue",Helvetica,Arial,sans-serif;
   font-size: 22px;
-  font-style: italic;
+  font-style: bold;
   line-height: 22px;
 }
 
@@ -301,15 +305,14 @@ header .intro-text .intro-heading {
 
 @media(min-width:768px) {
   header .intro-text {
-      padding-top: 300px;
-      padding-bottom: 200px;
+      padding-top: 30px;
+      padding-bottom: 20px;
   }
 
   header .intro-text .intro-lead-in {
       margin-bottom: 25px;
       font-family: "Droid Serif","Helvetica Neue",Helvetica,Arial,sans-serif;
-      font-size: 40px;
-      font-style: italic;
+      font-size: 75px;
       line-height: 40px;
   }
 
@@ -317,14 +320,14 @@ header .intro-text .intro-heading {
       margin-bottom: 50px;
       text-transform: uppercase;
       font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
-      font-size: 75px;
+      font-size: 30px;
       font-weight: 700;
       line-height: 75px;
   }
 }
 
 section {
-  padding: 100px 0;
+  padding: 1px 0;
 }
 
 section h2.section-heading {
@@ -344,7 +347,7 @@ section h3.section-subheading {
 
 @media(min-width:768px) {
   section {
-      padding: 150px 0;
+      padding: 5px 0;
   }
 }
 
@@ -490,8 +493,8 @@ section h3.section-subheading {
   }
 
   h1 {
-  font-size: 6rem;
-  margin-top: 30vh;
+  font-size: 3rem;
+  margin-top: 0.5vh;
   }
 
   h2 { font-size: 3rem; }
