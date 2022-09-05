@@ -1,8 +1,12 @@
 class ScoresController < ApplicationController
   before_action :set_score, only: :show
 
-  def show
+  def index
+    @user = current_user
+    @scores = Score.where(user: @user)
   end
+
+  def show; end
 
   def compute_score
     @user = current_user

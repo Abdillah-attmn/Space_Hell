@@ -13,7 +13,7 @@ Rails.application.routes.draw do
       get '/answer', to: "answers#answer"
     end
   end
-  resources :scores, only: %i[show create]
+  resources :scores, only: %i[index show create]
   resources :chatrooms, only: :show do
     resources :messages, only: :create
   end

@@ -1,0 +1,28 @@
+<h2>My scores</h2>
+
+<div class = "container">
+  <div class = "row">
+    <ul>
+      <table class = "table">
+        <thead>
+          <tr>
+            <th>Level</th>
+            <th>Points</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @scores.each do |score| %>
+            <tr>
+              <td>Level <%= score[:game_id] %></td>
+              <td><%= score.point %></td>
+            </tr>
+          <% end %>
+          <tr>
+            <td>Total</td>
+            <td><%= @user.total_score %></td>
+          </tr>
+        </tbody>
+      </table>
+    </ul>
+  </div>
+</div>
