@@ -15,9 +15,9 @@
           </tr>
         </thead>
         <tbody>
-          <% @scores.each do |score| %>
+          <% @scores.each_with_index do |score, i| %>
             <tr style="color: white">
-              <td>Level <%= score[:game_id] %></td>
+              <td>Level <%= i + 1 %></td>
               <td><%= score.point %></td>
             </tr>
           <% end %>

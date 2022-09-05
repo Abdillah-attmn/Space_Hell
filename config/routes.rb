@@ -14,6 +14,7 @@ Rails.application.routes.draw do
     end
   end
   resources :scores, only: %i[index show create]
+  get '/infos', to: 'users#show', as: :infos
   resources :chatrooms, only: :show do
     resources :messages, only: :create
   end
