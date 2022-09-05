@@ -1,24 +1,28 @@
-<h2>My scores</h2>
+<video id="background-video" autoplay loop muted>
+             <source src="https://thumbs.gfycat.com/RemoteImpishBlackbear-mobile.mp4" type="video/mp4">
+</video>
+
+<h2 class ="mt-5" style="font-family: 'Space Age', sans-serif;">My scores</h2>
 
 <div class = "container">
   <div class = "row">
-    <ul>
+    <ul class="mt-5">
       <table class = "table">
         <thead>
-          <tr>
+          <tr style="color: white">
             <th>Level</th>
             <th>Points</th>
           </tr>
         </thead>
         <tbody>
           <% @scores.each do |score| %>
-            <tr>
+            <tr style="color: white">
               <td>Level <%= score[:game_id] %></td>
               <td><%= score.point %></td>
             </tr>
           <% end %>
-          <tr>
-            <td>Total</td>
+          <tr style="color: white">
+            <td >Total</td>
             <td><%= @user.total_score %></td>
           </tr>
         </tbody>
