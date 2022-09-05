@@ -21,10 +21,6 @@ class User < ApplicationRecord
   end
 
   def total_score
-    total_score = 0
-    scores.each do |score|
-      total_score += score.point
-    end
-    return total_score
+    return scores.map(&:point).sum
   end
 end
