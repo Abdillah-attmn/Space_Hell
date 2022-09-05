@@ -1,0 +1,25 @@
+<h1><%= @user.nickname %>'s Profil</h1>
+<ul>
+  <li> <img src="https://cdn2.iconfinder.com/data/icons/people-flat-design/64/People-Man-Boy-Kid-Happy-Smile-Avatar-1024.png" class= "img-thumbnail w-25" alt=""></li>
+  <li style="color: white">
+    <%= @user.firstname %>
+  </li>
+  <li style="color: white">
+    <%= @user.lastname %>
+  </li>
+  <li style="color: white">
+    <%= @user.email %>
+  </li>
+  <li style="color: white">
+    <%= @user.total_score %>
+  </li>
+  <li style="color: white">
+    <p>All wrong answers</p>
+    <% @user.answers.each do |answer| %>
+      <% if answer.proposal.correct == false %>
+      <% game = answer.proposal.question.game %>
+        Game: <%= game.title %> ; Question: <%= answer.proposal.question.content %>; My Answer: <%= answer.proposal.content %><br>
+      <% end %>
+    <% end %>
+  </li>
+</ul>
