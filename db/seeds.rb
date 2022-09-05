@@ -16,14 +16,14 @@ Chatroom.destroy_all
 User.destroy_all
 
 Chatroom.create!(name: "The Great Chat")
-level_one = Game.create!(title: "part_one", content: "Let's go!")
+level_one = Game.create!(title: "level 1", content: "Let's go!")
 
 first_question = Question.create!(content: "What is the closest planet in the earth?",
                                   game: level_one, image: "https://static.videezy.com/system/resources/previews/000/005/499/original/Earth_Spin_In_Hands.mp4")
 
 Proposal.create!(content: "Mercury", question: first_question)
-second_proposal_question_one = Proposal.create!(content: "Venus", question: first_question)
-Proposal.create!(content: "Mars", question: first_question, correct: true)
+second_proposal_question_one = Proposal.create!(content: "Venus", question: first_question, correct: true)
+Proposal.create!(content: "Mars", question: first_question)
 Proposal.create!(content: "Moon", question: first_question)
 
 second_question = Question.create!(content: "What is the farest planet of solar system?", game: level_one, image: "https://static.videezy.com/system/resources/previews/000/039/000/original/alb_space2006_1080p.mp4")
@@ -33,7 +33,7 @@ Proposal.create!(content: "Saturn", question: second_question)
 Proposal.create!(content: "Uranus", question: second_question)
 Proposal.create!(content: "Neptune", question: second_question, correct: true)
 
-level_two = Game.create!(title: "part_two", content: "Let's go!")
+level_two = Game.create!(title: "level 2", content: "Let's go!")
 
 first_question = Question.create!(content: "What is the largest planet in the solar system?", game: level_two, image: "https://static.videezy.com/system/resources/previews/000/053/043/original/22649_Planets_on_the_galaxy_HD_BG.mp4")
 
@@ -57,7 +57,7 @@ Proposal.create!(content: "Saturn", question: third_question)
 Proposal.create!(content: "Pluto", question: third_question)
 Proposal.create!(content: "Uranus", question: third_question)
 
-level_three = Game.create!(title: "part_three", content: "Let's go!")
+level_three = Game.create!(title: "level 3", content: "Let's go!")
 
 first_question = Question.create!(content: "Who is the first man to walk on the moon?", game: level_three, image: "https://static.videezy.com/system/resources/previews/000/037/097/original/4k-blades_of-grass-big-moon-on-night-sky-background.mp4")
 
@@ -89,7 +89,7 @@ Proposal.create!(content: "Saturn", question: fourth_question)
 Proposal.create!(content: "Pluto", question: fourth_question, correct: true)
 Proposal.create!(content: "Namek", question: fourth_question)
 
-level_four = Game.create!(title: "part_four", content: "Let's go!")
+level_four = Game.create!(title: "level 4", content: "Let's go!")
 
 first_question = Question.create!(content: "In what year did the first man walk on the moon?",
                                   game: level_four, image: "https://static.videezy.com/system/resources/previews/000/022/287/original/4k-moon-flight-over-background.mp4")
@@ -128,7 +128,7 @@ Proposal.create!(content: "Saturn", question: fifth_question)
 Proposal.create!(content: "Pluto", question: fifth_question)
 Proposal.create!(content: "Jupiter", question: fifth_question, correct: true)
 
-level_five = Game.create!(title: "part_five", content: "Let's go!")
+level_five = Game.create!(title: "level 5", content: "Let's go!")
 
 first_question = Question.create!(content: "How many planets does the Milky Way have?", game: level_five, image: "https://static.videezy.com/system/resources/previews/000/036/766/original/earth_stock2.mp4")
 
@@ -178,7 +178,7 @@ Proposal.create!(content: "Between Saturn and Uranus", question: sixth_question)
 2.times do
   User.create!(firstname: Faker::Name.first_name, lastname: Faker::Name.last_name,
                email: Faker::Internet.email, password: "password",
-              nickname: Faker::Name.middle_name)
+               nickname: Faker::Name.middle_name)
 end
 
 first_user = User.first
