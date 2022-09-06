@@ -5,4 +5,5 @@ class Game < ApplicationRecord
   has_many :proposals, through: :questions
   has_many :answers, through: :proposals
   validates_presence_of :title
+  has_one_attached :photo_game
 end

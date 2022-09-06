@@ -6,6 +6,7 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 require 'faker'
+require 'open-uri'
 Answer.destroy_all
 Proposal.destroy_all
 Question.destroy_all
@@ -15,66 +16,95 @@ Message.destroy_all
 Chatroom.destroy_all
 User.destroy_all
 
-Chatroom.create!(name: "The Great Chat")
-level_one = Game.create!(title: "level 1", content: "Let's go!")
 
-first_question = Question.create!(content: "What is the closest planet in the earth?",
-                                  game: level_one, image: "https://static.videezy.com/system/resources/previews/000/005/499/original/Earth_Spin_In_Hands.mp4")
+file_images = ["https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Earth_Western_Hemisphere_transparent_background.png/1200px-Earth_Western_Hemisphere_transparent_background.png?20150429101758",
+               "https://upload.wikimedia.org/wikipedia/commons/2/27/Mars_transparent.png",
+               "http://wiki.bacterialtakeover.com/images/4/41/Mercury.png",
+               "https://upload.wikimedia.org/wikipedia/commons/7/70/Lava_planet.png",
+               "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Saturn-148300.svg/1280px-Saturn-148300.svg.png"]
+
+# Create Chatroom
+Chatroom.create!(name: "The Great Chat")
+
+# Create game n°1
+level_one = Game.new(title: "level 1", content: "Let's go!")
+file = URI.open(file_images[0])
+level_one.photo_game.attach(io: file, filename: "earth.png", content_type: "image/png")
+level_one.save!
+
+first_question = Question.create!(content: "Which is the closest planet in the earth?", game: level_one,
+                                  image: "https://static.videezy.com/system/resources/previews/000/005/499/original/Earth_Spin_In_Hands.mp4")
 
 Proposal.create!(content: "Mercury", question: first_question)
-second_proposal_question_one = Proposal.create!(content: "Venus", question: first_question, correct: true)
+Proposal.create!(content: "Venus", question: first_question, correct: true)
 Proposal.create!(content: "Mars", question: first_question)
 Proposal.create!(content: "Moon", question: first_question)
 
-second_question = Question.create!(content: "What is the farest planet of solar system?", game: level_one, image: "https://static.videezy.com/system/resources/previews/000/039/000/original/alb_space2006_1080p.mp4")
+second_question = Question.create!(content: "Which is the farest planet of solar system?", game: level_one,
+                                   image: "https://static.videezy.com/system/resources/previews/000/039/000/original/alb_space2006_1080p.mp4")
 
-first_proposal_question_two = Proposal.create!(content: "Pluto", question: second_question)
+Proposal.create!(content: "Pluto", question: second_question)
 Proposal.create!(content: "Saturn", question: second_question)
 Proposal.create!(content: "Uranus", question: second_question)
 Proposal.create!(content: "Neptune", question: second_question, correct: true)
 
-level_two = Game.create!(title: "level 2", content: "Let's go!")
 
-first_question = Question.create!(content: "What is the largest planet in the solar system?", game: level_two, image: "https://static.videezy.com/system/resources/previews/000/053/043/original/22649_Planets_on_the_galaxy_HD_BG.mp4")
+# Game n°2
+level_two = Game.new(title: "level 2", content: "Let's go!")
+file = URI.open(file_images[1])
+level_two.photo_game.attach(io: file, filename: "earth.png", content_type: "image/png")
+level_two.save!
+
+first_question = Question.create!(content: "Which is the largest planet in the solar system?", game: level_two,
+                                  image: "https://static.videezy.com/system/resources/previews/000/053/043/original/22649_Planets_on_the_galaxy_HD_BG.mp4")
 
 Proposal.create!(content: "Jupiter", question: first_question, correct: true)
 Proposal.create!(content: "Earth", question: first_question)
-third_proposal_question_three = Proposal.create!(content: "Saturn", question: first_question)
+Proposal.create!(content: "Saturn", question: first_question)
 Proposal.create!(content: "Moon", question: first_question)
 
-second_question = Question.create!(content: "What is the name of the European rocket?", game: level_two, image: "https://static.videezy.com/system/resources/previews/000/037/624/original/cohete_fondo_espacio.mp4")
+second_question = Question.create!(content: "What is the name of the European rocket?", game: level_two,
+                                   image: "https://static.videezy.com/system/resources/previews/000/037/624/original/cohete_fondo_espacio.mp4")
 
 Proposal.create!(content: "Ariane", question: second_question, correct: true)
 Proposal.create!(content: "Apollo", question: second_question)
 Proposal.create!(content: "Travel", question: second_question)
 Proposal.create!(content: "Nautilus", question: second_question)
 
-third_question = Question.create!(content: "Besides the Moon, what is the closest planet to Earth?", game: level_two,
+third_question = Question.create!(content: "Besides the Moon, which is the closest planet to Earth?", game: level_two,
                                   image: "https://static.videezy.com/system/resources/previews/000/038/506/original/alb_earth1005_1080p_24fps.mp4")
 
-Proposal.create!(content: "Mars", question: third_question, correct: true)
+Proposal.create!(content: "Venus", question: third_question, correct: true)
 Proposal.create!(content: "Saturn", question: third_question)
-Proposal.create!(content: "Pluto", question: third_question)
+Proposal.create!(content: "Mercury", question: third_question)
 Proposal.create!(content: "Uranus", question: third_question)
 
-level_three = Game.create!(title: "level 3", content: "Let's go!")
 
-first_question = Question.create!(content: "Who is the first man to walk on the moon?", game: level_three, image: "https://static.videezy.com/system/resources/previews/000/037/097/original/4k-blades_of-grass-big-moon-on-night-sky-background.mp4")
+
+# Game n°3
+level_three = Game.new(title: "level 3", content: "Let's go!")
+file = URI.open(file_images[2])
+level_three.photo_game.attach(io: file, filename: "mercury.png", content_type: "image/png")
+level_three.save!
+
+first_question = Question.create!(content: "Who is the first man to walk on the moon?", game: level_three,
+                                  image: "https://static.videezy.com/system/resources/previews/000/037/097/original/4k-blades_of-grass-big-moon-on-night-sky-background.mp4")
 
 Proposal.create!(content: "Yuri Gagarin", question: first_question)
 Proposal.create!(content: "Buzz Aldrin", question: first_question)
 Proposal.create!(content: "Neil Armstrong", question: first_question, correct: true)
 Proposal.create!(content: "Moon light", question: first_question)
 
-second_question = Question.create!(content: "What is the closest star to Earth?", game: level_three, image: "https://static.videezy.com/system/resources/previews/000/047/286/original/stockvideo_05771k.mp4")
+second_question = Question.create!(content: "What is the closest star to Earth?", game: level_three,
+                                   image: "https://static.videezy.com/system/resources/previews/000/047/286/original/stockvideo_05771k.mp4")
 
 Proposal.create!(content: "The Sun", question: second_question, correct: true)
 Proposal.create!(content: "The moon", question: second_question)
 Proposal.create!(content: "Alpha Centauri", question: second_question)
 Proposal.create!(content: "Big dog", question: second_question)
 
-third_question = Question.create!(content: "What is the name of the gigantic
-                                                explosion with which the universe began?", game: level_three, image: "https://static.videezy.com/system/resources/previews/000/051/938/original/2017_06_16-Particle-Explode1.mp4")
+third_question = Question.create!(content: "What is the name of the gigantic explosion with which the universe began?", game: level_three,
+                                  image: "https://static.videezy.com/system/resources/previews/000/051/938/original/2017_06_16-Particle-Explode1.mp4")
 
 Proposal.create!(content: "Bang-Bang", question: third_question)
 Proposal.create!(content: "big-Car", question: third_question)
@@ -89,7 +119,12 @@ Proposal.create!(content: "Saturn", question: fourth_question)
 Proposal.create!(content: "Pluto", question: fourth_question, correct: true)
 Proposal.create!(content: "Namek", question: fourth_question)
 
+
+# Game n°4
 level_four = Game.create!(title: "level 4", content: "Let's go!")
+file = URI.open(file_images[3])
+level_four.photo_game.attach(io: file, filename: "lava_planet.png", content_type: "image/png")
+level_four.save!
 
 first_question = Question.create!(content: "In what year did the first man walk on the moon?",
                                   game: level_four, image: "https://static.videezy.com/system/resources/previews/000/022/287/original/4k-moon-flight-over-background.mp4")
@@ -128,7 +163,12 @@ Proposal.create!(content: "Saturn", question: fifth_question)
 Proposal.create!(content: "Pluto", question: fifth_question)
 Proposal.create!(content: "Jupiter", question: fifth_question, correct: true)
 
+
+# Game n°5
 level_five = Game.create!(title: "level 5", content: "Let's go!")
+file = URI.open(file_images[4])
+level_five.photo_game.attach(io: file, filename: "Saturn.png", content_type: "image/png")
+level_five.save!
 
 first_question = Question.create!(content: "How many planets does the Milky Way have?", game: level_five, image: "https://static.videezy.com/system/resources/previews/000/036/766/original/earth_stock2.mp4")
 
@@ -168,7 +208,8 @@ Proposal.create!(content: "Rocky planets", question: fifth_question)
 Proposal.create!(content: "Aqueous planets", question: fifth_question)
 Proposal.create!(content: "Research planets", question: fifth_question)
 
-sixth_question = Question.create!(content: "The asteroid belt, do you know where it is?", game: level_five, image: "https://static.videezy.com/system/resources/previews/000/046/606/original/light_flying.mp4")
+sixth_question = Question.create!(content: "The asteroid belt, do you know where it is?", game: level_five,
+                                  image: "https://static.videezy.com/system/resources/previews/000/046/606/original/light_flying.mp4")
 
 Proposal.create!(content: "Between Venus and Earth", question: sixth_question)
 Proposal.create!(content: "Between Mars and Jupiter", question: sixth_question, correct: true)
@@ -180,19 +221,3 @@ Proposal.create!(content: "Between Saturn and Uranus", question: sixth_question)
                email: Faker::Internet.email, password: "password",
                nickname: Faker::Name.middle_name)
 end
-
-first_user = User.first
-last_user = User.last
-
-first_attempt_user_one = Answer.new(user: first_user)
-# first_attempt_user_one.proposal.question = first_question
-first_attempt_user_one.proposal = second_proposal_question_one
-first_attempt_user_one.save!
-
-second_attempt_user_one = Answer.new(user: first_user)
-second_attempt_user_one.proposal = first_proposal_question_two
-second_attempt_user_one.save!
-
-first_attempt_user_two = Answer.new(user: last_user)
-first_attempt_user_two.proposal = third_proposal_question_three
-first_attempt_user_two.save!
