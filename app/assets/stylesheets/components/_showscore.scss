@@ -1,14 +1,14 @@
 .winner-wrap{
   border-radius: 7px;
-  max-width:280px;
-  min-height:280px;
-  background:#b21f66;
-  margin:5% auto 0;
-  position:relative;
-  padding:1rem 2rem 6.5rem 2rem;
+  max-width: 331px;
+  height: 490px;
+  /* min-height: 198px; */
+  background: #b21f66;
+  margin: 1% auto 0;
+  position: relative;
+  padding: 1rem 2rem 6.5rem 2rem;
   font-family: 'Lato', sans-serif;
-  text-align:center;
-  cursor:pointer;
+  text-align: center;
 }
 .winner-wrap:hover .right-ribbon{
   right:-45px;
@@ -169,8 +169,8 @@
 }
 
 .btn {
-  margin: 6px;
-  --bs-btn-padding-x: 35px;
+  margin-top: 6px;
+  --bs-btn-padding-x: 61px;
   --bs-btn-padding-y: 20px;
   color: #ffffff;
 }
@@ -181,9 +181,9 @@
 
 .BigTitleH1 {
   color: #ffffff;
-  font-size: 6rem;
-  margin-top: 5vh;
-  box-shadow: 10px 5px 5px rgb(0, 0, 0);
+  font-size: 4rem;
+  margin-top: 0vh;
+  margin-bottom: 0vh;
 }
 
 .card-area-score {
