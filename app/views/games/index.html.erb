@@ -12,8 +12,64 @@
 
   <% @games.each_with_index do |game, index| %>
 
+
+
     <div class='demo-card <%= @demo_cards[index % @demo_cards.size ] %>'>
       <div class="container">
+
+        <% if game.no_question?(current_user) %>
+          <div class='card bg-dark'>
+            <% if game.photo_game.attached? %>
+              <div class="imgBx ">
+                <%= cl_image_tag(game.photo_game.key,
+                      width: 400, height: 400, crop: :fit) %>
+              </div>
+            <% end %>
+            <div class="contentBx ">
+              <h2>Level <%= index + 1 %></h2>
+              <div class="size">
+                <h3>Questions:</h3>
+                <% for i in(1..game.questions.count) do %>
+                  <span><%= i %></span>
+                <% end %>
+              </div>
+              <div class="color">
+                <h3>Difficulty:</h3>
+                <% for i in(1..index+1) do %>
+                  <span></span>
+                <% end %>
+              </div>
+              <h3>There are no question</h3>
+            </div>
+          </div>
+
+        <% elsif game.over?(current_user) %>
+          <div class='card bg-secondary'>
+            <% if game.photo_game.attached? %>
+              <div class="imgBx ">
+                <%= cl_image_tag(game.photo_game.key,
+                      width: 400, height: 400, crop: :fit) %>
+              </div>
+            <% end %>
+            <div class="contentBx ">
+              <h2>Level <%= index + 1 %></h2>
+              <div class="size">
+                <h3>Questions:</h3>
+                <% for i in(1..game.questions.count) do %>
+                  <span><%= i %></span>
+                <% end %>
+              </div>
+              <div class="color">
+                <h3>Difficulty:</h3>
+                <% for i in(1..index+1) do %>
+                  <span></span>
+                <% end %>
+              </div>
+              <h3>You cleared this level</h3>
+            </div>
+          </div>
+
+        <% else %>
           <div class="card <%= @card_bg_colors[index % @card_bg_colors.size] %>">
             <% if game.photo_game.attached? %>
               <div class="imgBx ">
@@ -35,17 +91,12 @@
                   <span></span>
                 <% end %>
               </div>
-              <% user = current_user %>
-              <% questions = user.remaining_questions(game) %>
-              <% if questions.empty? && game.questions.empty? %>
-                <h3>There are no question</h3>
-              <% elsif questions.empty? %>
-                <h3>You cleared this level</h3>
-              <% else %>
-                <%= link_to "Start Now", game_question_path(game, questions[0]),class: "btn" %>
-              <% end %>
+              <% questions = current_user.remaining_questions(game) %>
+              <%= link_to "Start Now", game_question_path(game, questions[0]),class: "btn" %>
             </div>
           </div>
+        <% end %>
+
       </div>
 		</div>
 
