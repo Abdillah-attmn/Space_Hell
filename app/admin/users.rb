@@ -24,6 +24,7 @@ ActiveAdmin.register User do
       f.input :nickname
       f.input :firstname
       f.input :lastname
+      f.input :photo_avatar, as: :file
     end
     f.inputs "Admin" do
       f.input :admin
