@@ -80,3 +80,4 @@ gem 'devise'
 gem 'faker'
 gem 'activeadmin', github: 'activeadmin/activeadmin'
 gem 'inherited_resources', github: 'activeadmin/inherited_resources'
+gem "cloudinary"

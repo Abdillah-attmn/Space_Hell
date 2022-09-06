@@ -5,14 +5,15 @@ ActiveAdmin.register Game do
   #
   # Uncomment all parameters which should be permitted for assignment
   #
-  permit_params :title, :content, :category
+  permit_params :title, :content, :category, :photo_game
   #
 
   form do |f|
-    f.inputs "Identity" do
+    f.inputs "New Game" do
       f.input :title
       f.input :content
       f.input :category
+      f.input :photo_game, as: :file
     end
     f.actions
   end

@@ -2,6 +2,8 @@ class GamesController < ApplicationController
   before_action :set_game, only: :question_selector
   def index
     @games = Game.all
+    @demo_cards = %w[demo-card--step1 demo-card--step2 demo-card--step3 demo-card--step4 demo-card--step5]
+    @card_bg_colors = %w[bg-primary bg-success bg-warning bg-info bg-danger]
   end
 
   def question_selector
