@@ -63,7 +63,7 @@
               <% if questions.empty? %>
                 <h3>You cleared this level</h3>
               <% else %>
-                <%= link_to "Start Now", game_question_path(@games[1], questions[1]),class: "btn" %>
+                <%= link_to "Start Now", game_question_path(@games[1], questions[0]),class: "btn" %>
               <% end %>
             </div>
           </div>
@@ -95,7 +95,7 @@
               <% if questions.empty? %>
                 <h3>You cleared this level</h3>
               <% else %>
-                <%= link_to "Start Now", game_question_path(@games[2], questions[2]),class: "btn" %>
+                <%= link_to "Start Now", game_question_path(@games[2], questions[0]),class: "btn" %>
               <% end %>
             </div>
           </div>
@@ -127,7 +127,7 @@
               <% if questions.empty? %>
                 <h3>You cleared this level</h3>
               <% else %>
-                <%= link_to "Start Now", game_question_path(@games[3], questions[3]),class: "btn" %>
+                <%= link_to "Start Now", game_question_path(@games[3], questions[0]),class: "btn" %>
               <% end %>
             </div>
           </div>
@@ -159,7 +159,7 @@
               <% if questions.empty? %>
                 <h3>You cleared this level</h3>
               <% else %>
-                <%= link_to "Start Now", game_question_path(@games[4], questions[4]),class: "btn" %>
+                <%= link_to "Start Now", game_question_path(@games[4], questions[0]),class: "btn" %>
               <% end %>
             </div>
           </div>
