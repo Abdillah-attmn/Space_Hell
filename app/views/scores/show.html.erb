@@ -5,7 +5,7 @@
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ=" crossorigin="anonymous" />
 <section class="random-bg">
-    <h1 class="BigTitleH1" style="font-family: 'Space Age', sans-serif;">🏆 Score 🏆</h1>
+    <h2 class="BigTitleH1" style="font-family: 'Space Age', sans-serif;">🏆 Score 🏆</h2>
     <div class="winner-wrap">
       <div class="border"></div>
       <div class="medal-box"><i class="fas fa-medal"></i></div>
@@ -13,13 +13,8 @@
       <h1><%= @score.game.title %> Space Kids</h1>
       <h2>User : <%= @score.user.firstname %></h2>
       <h2><%= @score.point %> Points</h2>
-      <div class="winner-ribbon">WINNER</div>
       <div class="right-ribbon"></div>
       <div class="left-ribbon"></div>
     </div>
     <div class="BackBtnList"><%= link_to "Back to the list of the games", games_path ,class: "btn btn-outline-light" %></div>
   </section>
-
-<footer class="footer">
-   <p class="footer-text">&copy; 2022 Created by Space Kids</p>
-</footer>
