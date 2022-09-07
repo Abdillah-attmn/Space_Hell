@@ -4,6 +4,9 @@
 
 import { application } from "./application"
 
+import AutoScrollController from "./auto_scroll_controller"
+application.register("auto-scroll", AutoScrollController)
+
 import ChatroomSubscriptionController from "./chatroom_subscription_controller"
 application.register("chatroom-subscription", ChatroomSubscriptionController)
 
@@ -12,7 +15,6 @@ application.register("color-answers", ColorAnswersController)
 
 import GamesBlockController from "./games_block_controller"
 application.register("games-block", GamesBlockController)
-
 
 import HelloController from "./hello_controller"
 application.register("hello", HelloController)
