@@ -3,6 +3,6 @@ class UsersController < ApplicationController
     @user = current_user
     @level = 1
     games = @user.games
-    @level = games.size
+    @level = games.size + 1
   end
 end
