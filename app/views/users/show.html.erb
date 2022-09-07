@@ -55,6 +55,7 @@
                   <th>Game</th>
                   <th>Question</th>
                   <th>Proposal</th>
+                  <th>Right answer</th>
                 </tr>
               </thead>
 
@@ -67,6 +68,7 @@
                       <td><%= game.title %></td>
                       <td><%= answer.proposal.question.content %></td>
                       <td><%= answer.proposal.content %></td>
+                      <td><%= answer.proposal.question.proposals.find_by(correct:true).content %></td>
                     <% end %>
                   </tr>
                 <% end %>

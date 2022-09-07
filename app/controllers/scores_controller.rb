@@ -4,6 +4,11 @@ class ScoresController < ApplicationController
   def index
     @user = current_user
     @scores = Score.where(user: @user)
+    @final_score = 0
+    @scores.each do |score|
+      @final_score += score.game.questions.count * 10
+    end
+    @final_score
   end
 
   def show; end

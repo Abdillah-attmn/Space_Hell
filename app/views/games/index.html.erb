@@ -7,12 +7,10 @@
 <section id=timeline>
 	<h1>Trajectory of Your Space 🚀Ship🚀</h1>
 	<p class="leader">🚀 ☄️ Space is the zone above and around our planet where there is no air to breathe or to scatter light ☄️ 🚀</p>
-	<div class="demo-card-wrapper">
+	<div class="demo-card-wrapper" data-controller="auto-scroll" data-action="scroll@window->auto-scroll#scroll">
 
 
   <% @games.each_with_index do |game, index| %>
-
-
 
     <div class='demo-card <%= @demo_cards[index % @demo_cards.size ] %>'>
       <div class="container">
@@ -70,7 +68,7 @@
           </div>
 
         <% else %>
-          <div class="card <%= @card_bg_colors[index % @card_bg_colors.size] %>">
+          <div class="card <%= @card_bg_colors[index % @card_bg_colors.size] %>" data-auto-scroll-target=button>
             <% if game.photo_game.attached? %>
               <div class="imgBx ">
                 <%= cl_image_tag(game.photo_game.key,
@@ -91,8 +89,8 @@
                   <span></span>
                 <% end %>
               </div>
-              <% questions = current_user.remaining_questions(game) %>
-              <%= link_to "Start Now", game_question_path(game, questions[0]),class: "btn" %>
+                <% questions = current_user.remaining_questions(game) %>
+                <%= link_to "Start Now", game_question_path(game, questions[0]),class: "btn" %>
             </div>
           </div>
         <% end %>

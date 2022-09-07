@@ -12,6 +12,7 @@
           <tr style="color: white">
             <th>Level</th>
             <th>Points</th>
+            <th>Max Points</th>
           </tr>
         </thead>
         <tbody>
@@ -19,11 +20,13 @@
             <tr style="color: white">
               <td>Level <%= i + 1 %></td>
               <td><%= score.point %></td>
+              <td><%= score.game.questions.count * 10 %></td>
             </tr>
           <% end %>
           <tr style="color: white">
             <th>Total</th>
             <th><%= @user.total_score %></th>
+            <th><%= @final_score %></th>
           </tr>
         </tbody>
       </table>
