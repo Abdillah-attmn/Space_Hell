@@ -10,6 +10,7 @@ ActiveAdmin.register_page "Dashboard" do
       end
     end
 
+    li link_to("Back to Home", root_path)
     # Here is an example of a simple dashboard with columns and panels.
     #
     # columns do
