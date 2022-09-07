@@ -29,7 +29,7 @@
   position: absolute;
   width: 150px;
   height: 100%;
-  background: linear-gradient(#e003b737, #8d017138);
+  background: linear-gradient(#e003b7a2, #8d01714f);
   transition: width 0.4s;
   overflow: hidden;
   z-index: 2;
@@ -69,7 +69,7 @@
   text-transform: uppercase;
   font-size: 1em;
   font-weight: bold;
-  background: rgba(0,0,0,0.15);
+  background: rgba(0, 0, 0, 0.503);
   padding: 0.125rem 0.75rem;
   border-radius: 100px;
   white-space: nowrap;
@@ -178,9 +178,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 125px;
+  font-size: 60px;
   top: 100px;
   margin-top: 25%;
   margin-left: 25%;
-  color: rgba(0, 0, 0, 0.315);
+  color: rgba(0, 0, 0, 0.513);
 }
