@@ -3,12 +3,13 @@
   max-width: 331px;
   height: 490px;
   /* min-height: 198px; */
-  background: #b21f66;
   margin: 1% auto 0;
   position: relative;
   padding: 1rem 2rem 6.5rem 2rem;
   font-family: 'Lato', sans-serif;
   text-align: center;
+  background-image: url("https://static.mediapart.fr/etmagine/default/files/2017/12/21/gargantua-trou-noir-supermassif-imagine-pour-le-film-interstellar.jpg");
+  background-size: cover;
 }
 .winner-wrap:hover .right-ribbon{
   right:-45px;
@@ -24,24 +25,15 @@
   box-shadow:0 3px 6px 0px rgba(0,0,0,0.2);
   transition:all ease .3s;
 }
-.border{
-  position:absolute;
-  width:90%;
-  height:90%;
-  border:1px solid rgba(255, 189, 105, 0.4);
-  left:0; right:0;
-  top:0; bottom:0;
-  margin:auto;
-}
+
 .medal-box{
   width:60px;
   height:60px;
-  background:#fe346e;
   color:#ffbd69;
   border-radius:50px;
   line-height:70px;
   font-size:2.3rem;
-  margin:.8rem auto 1rem;
+  margin:.8rem auto 0rem;
 }
 .winner-wrap h1{
   color:rgba(255, 189, 105, 0.95);
@@ -193,5 +185,14 @@
 
 .btn-outline-light {
   --bs-btn-hover-color: #ffffff;
-  --bs-btn-hover-bg: #b21f66;
+  --bs-btn-hover-bg: rgba(255, 190, 105, 0.6);
+}
+
+
+.LEVELEND {
+  font-size: 60px;
+  font-family: 'Space Age', sans-serif;
+  color: #fff;
+  margin-bottom: 40px;
+  text-align: center;
 }
