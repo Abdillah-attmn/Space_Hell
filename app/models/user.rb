@@ -3,8 +3,8 @@ class User < ApplicationRecord
   has_many :games, through: :scores
   has_many :answers, dependent: :destroy
   validates_presence_of :nickname
-  validates :firstname, uniqueness: { scope: :lastname }
-  validates :email, uniqueness: true
+  validates :firstname, presence: true, uniqueness: { scope: :lastname }
+  validates :email, presence: true, uniqueness: true
   validates :encrypted_password, presence: true
   has_one_attached :photo_avatar
   # Include default devise modules. Others available are:
