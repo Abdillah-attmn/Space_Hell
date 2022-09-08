@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <% if content_for? :for_head %>
+      <%= yield :for_head %>
+    <% end %>
+
     <link rel="shortcut icon" href="https://img.icons8.com/external-justicon-blue-justicon/344/external-rocket-science-justicon-blue-justicon.png" />
     <link rel="apple-touch-icon" href="https://img.icons8.com/external-justicon-blue-justicon/344/external-rocket-science-justicon-blue-justicon.png" />
     <title>Spacekids</title>
@@ -12,6 +16,8 @@
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
+
+
   </head>
 
   <body>
