@@ -7,39 +7,40 @@
 
     <main class="main_home">
 
-        <section class="card-area-score">
-            <!-- Card: Question -->
-            <section class="card-section">
-                <div class="cards">
-                    <div class="flip-card">
-                        <div class="flip-card__container">
-                            <div class="card-front">
-                                <div class="card-front__tp card-front__tp--city">
+        <section class="card-area-score" data-controller='pop-up'>
+          <!-- Card: Question -->
+          <div data-pop-up-target = "screen"></div>
+          <section class="card-section">
+            <div class="cards">
+              <div class="flip-card">
+                <div class="flip-card__container">
+                  <div class="card-front">
+                    <div class="card-front__tp card-front__tp--city">
 
-                              <% game = @question.game %>
-                              <% questions = game.questions %>
-                            <h2 class="card-front__heading">
-                                Question n°<%= questions.count - current_user.remaining_questions(game).count + 1%>
-                            </h2>
-                            <p class="card-front__text-price">
-                                Space kids
-                            </p>
-                                </div>
-
-                                <div class="card-front__bt">
-                                    <p class="card-front__text-view card-front__text-view--city">
-                                        View Question
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div class="card-back">
-                                <video class="video__container" autoplay muted loop>
-                                    <source class="video__media" src="<%= @question.image %>" type="video/mp4">
-                                </video>
-                            </div>
-                        </div>
+                      <% game = @question.game %>
+                      <% questions = game.questions %>
+                      <h2 class="card-front__heading">
+                        Question n°<%= questions.count - current_user.remaining_questions(game).count + 1%>
+                      </h2>
+                      <p class="card-front__text-price">
+                        Space kids
+                      </p>
                     </div>
+
+                    <div class="card-front__bt">
+                      <p class="card-front__text-view card-front__text-view--city">
+                        View Question
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="card-back">
+                    <video class="video__container" autoplay muted loop>
+                      <source class="video__media" src="<%= @question.image %>" type="video/mp4">
+                    </video>
+                  </div>
+                </div>
+              </div>
 
                     <div class="inside-page">
                         <div class="inside-page__container">
@@ -49,8 +50,7 @@
                             </h3>
 
                               <% @proposals.each do |p| %>
-                                <%#= link_to "#{p.content}", game_question_answers_path(@question.game, @question, p), class: "inside-page__btn inside-page__btn--city", data: {turbo_method: :post} %>
-                                <%= link_to "#{p.content}", game_question_answer_path(@question.game, @question, :proposal_id => p.id), class: "inside-page__btn inside-page__btn--city", data:{correct: p.correct, controller: 'color-answers', action: 'click->color-answers#color'} %>
+                                <%= link_to "#{p.content}", game_question_answer_path(@question.game, @question, :proposal_id => p.id), class: "inside-page__btn inside-page__btn--city", data:{correct: p.correct, controller: 'color-answers', action: 'click->pop-up#display click->color-answers#color'} %>
                               <% end  %>
 
                           </div>

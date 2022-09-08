@@ -6,7 +6,7 @@
 <!-- la gride de trajictoire -->
 <section id=timeline>
 	<h1>Trajectory of Your Space 🚀Ship🚀</h1>
-	<div class="demo-card-wrapper" data-controller="auto-scroll" data-action="scroll@window->auto-scroll#scroll">
+	<div class="demo-card-wrapper" data-controller="auto-scroll" data-action="window->auto-scroll#scroll">
 
 
   <% @games.each_with_index do |game, index| %>
@@ -62,7 +62,9 @@
                   <span></span>
                 <% end %>
               </div>
-              <h3>You cleared this level</h3>
+              <h3>Level cleared</h3>
+              <% questions = current_user.remaining_questions(game) %>
+              <%= link_to "Retry", reset_game_path(game.id), data:{turbo_method: :patch}, class: "btn" %>
             </div>
           </div>
 

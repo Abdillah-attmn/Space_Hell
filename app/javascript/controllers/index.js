@@ -18,3 +18,6 @@ application.register("games-block", GamesBlockController)
 
 import HelloController from "./hello_controller"
 application.register("hello", HelloController)
+
+import PopUpController from "./pop_up_controller"
+application.register("pop-up", PopUpController)

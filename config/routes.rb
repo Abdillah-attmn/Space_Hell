@@ -13,7 +13,9 @@ Rails.application.routes.draw do
       resources :answers, only: :create
       get '/answer', to: "answers#answer"
     end
+    patch 'reset', on: :member
   end
+
   resources :scores, only: %i[index show create]
   get '/infos', to: 'users#show', as: :infos
   resources :chatrooms, only: :show do

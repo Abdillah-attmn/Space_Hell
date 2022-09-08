@@ -156,7 +156,7 @@ Proposal.create!(content: "Star", question: fourth_question, correct: true)
 Proposal.create!(content: "Rift-in-Space", question: fourth_question)
 Proposal.create!(content: "Asteroid", question: fourth_question)
 
-fifth_question = Question.create!(content: "The largest planet in the Milky Way is?", game: level_four, image: "https://static.videezy.com/system/resources/previews/000/051/545/original/Nebula_Background_6.mp4")
+fifth_question = Question.create!(content: "Is the largest planet in the Milky Way?", game: level_four, image: "https://static.videezy.com/system/resources/previews/000/051/545/original/Nebula_Background_6.mp4")
 
 Proposal.create!(content: "Vegeta", question: fifth_question)
 Proposal.create!(content: "Saturn", question: fifth_question)
@@ -191,7 +191,7 @@ Proposal.create!(content: "Mars", question: third_question)
 Proposal.create!(content: "Saturn", question: third_question, correct: true)
 Proposal.create!(content: "Jupiter", question: third_question, correct: true)
 
-fourth_question = Question.create!(content: "Dad, can you tell me which planet is not terrestrial?", game: level_five,
+fourth_question = Question.create!(content: "Dad, can you tell me which planet is not telluric?", game: level_five,
                                    image: "https://static.videezy.com/system/resources/previews/000/053/043/original/22649_Planets_on_the_galaxy_HD_BG.mp4")
 
 Proposal.create!(content: "Mercure", question: fourth_question)
@@ -199,7 +199,7 @@ Proposal.create!(content: "Uranus", question: fourth_question, correct: true)
 Proposal.create!(content: "Mars", question: fourth_question)
 Proposal.create!(content: "Telluric?", question: fourth_question)
 
-fifth_question = Question.create!(content: "This one is easier! The 4 giant planets (Jupiter, Saturn, Neptune, Uranus) are also called .",
+fifth_question = Question.create!(content: "This one is easier! The 4 giant planets (Jupiter, Saturn, Neptune, Uranus) are also called.",
                                   game: level_five,
                                   image: "https://static.videezy.com/system/resources/previews/000/021/975/original/beautiful-hd-jupiter-planet-background.mp4")
 
