@@ -7,8 +7,4 @@ export default class extends Controller {
     console.log(this.buttonTarget);
     this.buttonTarget.scrollIntoView();
   }
-
-  scroll() {
-    // this.buttonTarget.scrollIntoView();
-  }
 }

@@ -19,8 +19,6 @@ export default class extends Controller {
       event.currentTarget.classList.add('text-danger');
     }
 
-    setTimeout(() => {
-      location.assign(link);
-    }, 1000);
+    location.assign(link);
   }
 }

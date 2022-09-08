@@ -14,9 +14,9 @@ export default class extends Controller {
 
 
     if (correct == 'true') {
-      alert("that's correct!");
+      alert("That's correct!");
     } else {
-      alert("that's wrong!");
+      alert("That's wrong!");
     }
   }
 }
