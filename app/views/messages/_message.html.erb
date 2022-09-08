@@ -1,7 +1,7 @@
 <div style="font-family: 'Space Age', sans-serif;" id="message-<%= message.id %>">
   <small style="font-family: 'Space Age', sans-serif;">
-    <strong ><%= message.user.nickname %></strong>
-    <i><%= message.created_at.strftime("%a %b %e at %l:%M %p") %></i>
+    <strong style="font-size: 17px"><%= message.user.nickname %></strong>
+    <i style="font-size: 17px"><%= message.created_at.strftime("%a %b %e at %l:%M %p") %></i>
   </small>
-  <p><%= message.content %></p>
+  <p style="font-size: 25px"><%= message.content %></p>
 </div>
