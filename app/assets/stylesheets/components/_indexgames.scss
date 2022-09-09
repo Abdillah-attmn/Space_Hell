@@ -136,8 +136,10 @@ body {
       bottom: 0;
       left: 50%;
       border-left: $border;
+      background-color: goldenrod;
+      box-shadow: 1px 10px 3px rgb(226, 188, 91);
       @include mq-lg {
-        border-left: 1px solid $timeline;
+
       }
     }
   }
