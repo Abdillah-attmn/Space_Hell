@@ -525,15 +525,16 @@ h3 {
 /* Buttons =================================================*/
 
 .inside-page__btn {
+  margin: 1px;
   background-color: transparent;
-  border: 3px solid;
+  border: 2px solid;
   border-radius: .5rem;
   font-size: 1rem;
   font-weight: 800;
   position: relative;
   text-decoration: none;
   transition: all .3s ease;
-  width: 50%;
+  width: 49%;
   z-index: 10;
 }
 
