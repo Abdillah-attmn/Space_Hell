@@ -71,12 +71,12 @@ Proposal.create!(content: "Apollo", question: second_question)
 Proposal.create!(content: "Travel", question: second_question)
 Proposal.create!(content: "Nautilus", question: second_question)
 
-third_question = Question.create!(content: "Besides the Moon, which is the closest planet to Earth?", game: level_two,
+third_question = Question.create!(content: "What is the smallest planet in the solar system by mass?", game: level_two,
                                   image: "https://static.videezy.com/system/resources/previews/000/038/506/original/alb_earth1005_1080p_24fps.mp4")
 
-Proposal.create!(content: "Venus", question: third_question, correct: true)
+Proposal.create!(content: "Venus", question: third_question)
 Proposal.create!(content: "Saturn", question: third_question)
-Proposal.create!(content: "Mercury", question: third_question)
+Proposal.create!(content: "Mercury", question: third_question, correct: true)
 Proposal.create!(content: "Uranus", question: third_question)
 
 
@@ -156,7 +156,8 @@ Proposal.create!(content: "Star", question: fourth_question, correct: true)
 Proposal.create!(content: "Rift-in-Space", question: fourth_question)
 Proposal.create!(content: "Asteroid", question: fourth_question)
 
-fifth_question = Question.create!(content: "Is the largest planet in the Milky Way?", game: level_four, image: "https://static.videezy.com/system/resources/previews/000/051/545/original/Nebula_Background_6.mp4")
+fifth_question = Question.create!(content: "Which of these planets is the largest from the Milky Way?", game: level_four,
+                                  image: "https://static.videezy.com/system/resources/previews/000/051/545/original/Nebula_Background_6.mp4")
 
 Proposal.create!(content: "Vegeta", question: fifth_question)
 Proposal.create!(content: "Saturn", question: fifth_question)
@@ -177,7 +178,7 @@ Proposal.create!(content: "6", question: first_question)
 Proposal.create!(content: "8", question: first_question, correct: true)
 Proposal.create!(content: "12", question: first_question)
 
-second_question = Question.create!(content: "A black hole forms as a result of:", game: level_five, image: "https://static.videezy.com/system/resources/previews/000/046/828/original/geometric.mp4")
+second_question = Question.create!(content: "What causes black holes to appear?", game: level_five, image: "https://static.videezy.com/system/resources/previews/000/046/828/original/geometric.mp4")
 
 Proposal.create!(content: "Asteroid", question: second_question)
 Proposal.create!(content: "Explosion-Star", question: second_question, correct: true)
@@ -191,7 +192,7 @@ Proposal.create!(content: "Mars", question: third_question)
 Proposal.create!(content: "Saturn", question: third_question, correct: true)
 Proposal.create!(content: "Jupiter", question: third_question, correct: true)
 
-fourth_question = Question.create!(content: "Dad, can you tell me which planet is not telluric?", game: level_five,
+fourth_question = Question.create!(content: "Can you tell me which planet is not telluric?", game: level_five,
                                    image: "https://static.videezy.com/system/resources/previews/000/053/043/original/22649_Planets_on_the_galaxy_HD_BG.mp4")
 
 Proposal.create!(content: "Mercure", question: fourth_question)
